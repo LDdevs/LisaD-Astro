@@ -25,15 +25,19 @@ const projects = (await getCollection('blog')).sort(
 				tagline="See my most recent projects below to get an idea of my past experience."
 				align="start"
 			/>
-			<Grid variant="offset">
-				{
-					projects.map((project) => (
-						<li>
-							<PortfolioPreview project={project} />
-						</li>
-					))
-				}
-			</Grid>
+			<p>Lorem ipsum odor amet, consectetuer adipiscing elit. Nec integer vestibulum eget rutrum mollis, proin magnis sollicitudin. 
+                Augue maximus auctor quisque libero per quis luctus. Porta facilisis magna nostra nostra sapien scelerisque ultricies. 
+                Mauris netus a parturient facilisis arcu tempor elementum? Luctus proin a scelerisque ex morbi nibh accumsan nam eu. 
+                Finibus platea velit mi sed gravida eget. Amet cursus suspendisse rhoncus nibh cras. <br>
+                <br>
+                Potenti ultrices quisque fringilla suspendisse tortor leo. Vulputate faucibus imperdiet inceptos ad ultrices. 
+                Consectetur condimentum erat ullamcorper urna lectus hendrerit. Tempor nisi tempus posuere nisl litora bibendum? 
+                Posuere turpis habitasse vehicula quis mus torquent pharetra natoque. Porta maecenas enim malesuada varius nullam molestie. 
+                Consequat sollicitudin etiam amet, vivamus netus habitant curae. Accumsan ante auctor pellentesque quam arcu risus fames. 
+                Maecenas viverra venenatis sagittis litora arcu vivamus placerat. <br>
+                <br>
+                </p> <br>
+                
 		</main>
 		<ContactCTA />
         <Footer />
