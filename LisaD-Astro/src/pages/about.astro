@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreview from '../components/PortfolioPreview.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+import Footer from '../components/Footer.astro';
+
+const projects = (await getCollection('about')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="My Work | Lisa Downie"
+	description="Learn about Lisa Downie's most recent projects"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="About Me"
+				tagline="A bit about me and my background."
+				align="start"
+			/>
+
+            <img
+					alt="Lisa Downie wearing a white hooded top"
+					width="1553"
+					height="873"
+					src="/assets/mewithmonitors.png"
+                    class="rounded-6"
+				/>
+			<h4>I'm Lisa</h4>
+            <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Nec integer vestibulum eget rutrum mollis, proin magnis sollicitudin. 
+                Augue maximus auctor quisque libero per quis luctus. Porta facilisis magna nostra nostra sapien scelerisque ultricies. 
+                Mauris netus a parturient facilisis arcu tempor elementum? Luctus proin a scelerisque ex morbi nibh accumsan nam eu. 
+                Finibus platea velit mi sed gravida eget. Amet cursus suspendisse rhoncus nibh cras. <br>
+                <br>
+                Potenti ultrices quisque fringilla suspendisse tortor leo. Vulputate faucibus imperdiet inceptos ad ultrices. 
+                Consectetur condimentum erat ullamcorper urna lectus hendrerit. Tempor nisi tempus posuere nisl litora bibendum? 
+                Posuere turpis habitasse vehicula quis mus torquent pharetra natoque. Porta maecenas enim malesuada varius nullam molestie. 
+                Consequat sollicitudin etiam amet, vivamus netus habitant curae. Accumsan ante auctor pellentesque quam arcu risus fames. 
+                Maecenas viverra venenatis sagittis litora arcu vivamus placerat. <br>
+                <br>
+                Integer rutrum libero at fringilla finibus neque hac fames. Efficitur quam fringilla potenti tempus placerat primis. 
+                Dolor in hac est euismod ornare facilisis, nam efficitur. Montes ornare metus congue finibus cubilia. 
+                Tempus condimentum nullam ornare adipiscing ad sem potenti aptent. Praesent aenean mus bibendum, erat nibh mi. 
+                Lectus imperdiet lacinia habitasse; himenaeos dapibus elementum. Hendrerit tincidunt posuere auctor libero class nascetur vitae nostra. 
+                Pretium rutrum maximus donec ante, fermentum platea.<br>
+                <br>
+                Eget ac interdum augue nascetur ligula tincidunt iaculis. Dui per magnis himenaeos hac commodo bibendum. 
+                Facilisi cursus litora lobortis lacus accumsan curae. Interdum nunc euismod; nulla class dictumst aliquet. 
+                Inceptos aliquet commodo aenean dis netus blandit tincidunt nostra porta. Venenatis fermentum ullamcorper odio nec suscipit integer. 
+                Ex non facilisi cursus urna vivamus in. <br>
+                <br>
+                In litora augue sit facilisi consequat in tempor. Vivamus conubia netus ultricies potenti enim mus torquent at. 
+                Blandit lobortis et faucibus consequat placerat mattis magna pharetra. Ac interdum magnis mauris dictumst tempus. 
+                Efficitur orci ac libero etiam proin. Posuere justo sodales aptent curabitur, semper est neque? 
+                Ad himenaeos eleifend porta curabitur nostra hendrerit euismod. Feugiat dignissim mollis velit efficitur blandit diam. 
+                Per nostra per in fermentum vel senectus tincidunt. <br></p> <br>
+
+            <h5>Education</h5>
+                <p>Some</p>
+            <h5>Experience</h5>
+                <p>Lots</p>
+            <h5>Skills</h5>
+                <p>Multiple</p>
+		</main>
+		<ContactCTA />
+        <Footer />
+	</div>
+</BaseLayout>
